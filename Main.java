@@ -1,5 +1,11 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.ArrayList;
 
@@ -51,6 +57,21 @@ public class Main {
         });
         for (demoArrayList name : names) {
             System.out.println(name.toString());
+        }
+        System.out.println("\nRead The File");
+
+        // Read The File
+        try {
+            Path file = Paths.get("D:\\Question_2-3.txt");
+            BufferedReader reader = Files.newBufferedReader(file , StandardCharsets.UTF_8);
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+            }
+            catch (IOException e) {
+            System.err.println("IOException : " + e.getMessage());
         }
     }
 }
