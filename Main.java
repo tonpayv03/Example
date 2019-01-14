@@ -1,23 +1,17 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         ArrayList();
 
     }
 
-    public static void ArrayList() {
-
+    public static void ArrayList() throws FileNotFoundException {
         ArrayList<demoArrayList> names = new ArrayList<demoArrayList>();
 
         names.add(new demoArrayList("John", 20));
@@ -31,14 +25,14 @@ public class Main {
         System.out.println("\nExample Output");
 
         // Example Output
-        for(int i = 0; i < names.size(); i++) {
+        for (int i = 0; i < names.size(); i++) { // i = 0 i < names.size จบ loop i++ ทีละ1
             demoArrayList current = names.get(i);
-            for(int j = i + 1; j < names.size(); j++) {
+            for (int j = i + 1; j < names.size(); j++) {
                 demoArrayList compare = names.get(j);
                 if (current.getName().equals(compare.getName())) {
                     current.setScore(current.getScore() + compare.getScore());
                     names.remove(compare);
-                    j--;
+                    j--; // ลบ j ที่เป็นจริงออกจาก arraylist
                 }
             }
         }
@@ -49,29 +43,45 @@ public class Main {
         System.out.println("\nSort The Students By Name");
 
         // Sort The Students By Name
-         Collections.sort(names, new Comparator<demoArrayList>() {
+        Collections.sort(names, new Comparator<demoArrayList>() {
             @Override
             public int compare(demoArrayList o1, demoArrayList o2) {
                 return o1.getName().compareToIgnoreCase(o2.getName());
             }
         });
-        for (demoArrayList name : names) {
+        for (demoArrayList name : names)
             System.out.println(name.toString());
-        }
+
         System.out.println("\nRead The File");
 
         // Read The File
-        try {
-            Path file = Paths.get("D:\\Question_2-3.txt");
+        Scanner input = new Scanner(new File("D:\\Score.txt"));
+
+        ArrayList<demoArrayListFile> arr = new ArrayList<demoArrayListFile>();
+
+        while (input.hasNext()) {
+            String NameRead = input.next();
+            int ScoreRead = input.nextInt();
+
+            demoArrayListFile data = new demoArrayListFile(NameRead,ScoreRead);
+            arr.add(data);
+        }
+        for (demoArrayListFile file : arr) {
+            System.out.println(file.toString());
+        }
+
+ /*       try {
+            Path file = Paths.get("D:\\Score.txt");
             BufferedReader reader = Files.newBufferedReader(file , StandardCharsets.UTF_8);
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
+                arr.add(line);
             }
             reader.close();
-            }
-            catch (IOException e) {
+        }
+        catch (IOException e) {
             System.err.println("IOException : " + e.getMessage());
         }
+        System.out.println(arr); */
     }
 }
