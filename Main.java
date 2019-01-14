@@ -69,8 +69,9 @@ public class Main {
         for (demoArrayListFile file : arr) {
             System.out.println(file.toString());
         }
-        System.out.println("\nRead The File and Sum");
+        System.out.println("\nRead The File and Sum Score");
 
+        //Read The File and Sum Score
         for (int n = 0; n < arr.size(); n++) {
             demoArrayListFile first = arr.get(n);
             for (int m = n + 1; m < arr.size(); m++) {
