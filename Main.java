@@ -69,19 +69,21 @@ public class Main {
         for (demoArrayListFile file : arr) {
             System.out.println(file.toString());
         }
+        System.out.println("\nRead The File and Sum");
 
- /*       try {
-            Path file = Paths.get("D:\\Score.txt");
-            BufferedReader reader = Files.newBufferedReader(file , StandardCharsets.UTF_8);
-            String line;
-            while ((line = reader.readLine()) != null) {
-                arr.add(line);
+        for (int n = 0; n < arr.size(); n++) {
+            demoArrayListFile first = arr.get(n);
+            for (int m = n + 1; m < arr.size(); m++) {
+                demoArrayListFile second = arr.get(m);
+                if (first.getNameRead().equals(second.getNameRead())) {
+                    first.setScoreRead(first.getScoreRead() + second.getScoreRead());
+                    arr.remove(second);
+                    m--; //
+                }
             }
-            reader.close();
+            for (demoArrayListFile filesecond : arr) {
+                System.out.println(filesecond.toString());
+            }
         }
-        catch (IOException e) {
-            System.err.println("IOException : " + e.getMessage());
-        }
-        System.out.println(arr); */
     }
 }
