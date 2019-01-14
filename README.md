@@ -7,11 +7,17 @@ The input data is as follows. Each line contain a student name and his/her score
 Example Input:
 
 John 20
+
 Joe 15
+
 Anna 18
+
 John 14
+
 Anna 13
+
 Sam 15
+
 Joe 13
 
 
@@ -22,8 +28,11 @@ Write code that give the total sum of score for each student. Choose any program
 Example Output:
 
 John 34
+
 Joe 28
+
 Anna 31
+
 Sam 15
 
 Question 2.1 (Optional)
