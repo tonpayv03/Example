@@ -8,10 +8,10 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
         ArrayList();
-
+        ArrayListFile();
     }
 
-    public static void ArrayList() throws FileNotFoundException {
+    public static void ArrayList() {
         ArrayList<demoArrayList> names = new ArrayList<demoArrayList>();
 
         names.add(new demoArrayList("John", 20));
@@ -51,6 +51,10 @@ public class Main {
         });
         for (demoArrayList name : names)
             System.out.println(name.toString());
+    }
+
+
+    public static void ArrayListFile() throws FileNotFoundException {
 
         System.out.println("\nRead The File");
 
@@ -60,14 +64,14 @@ public class Main {
         ArrayList<demoArrayListFile> arr = new ArrayList<demoArrayListFile>();
 
         while (input.hasNext()) {
-            String NameRead = input.next();
-            int ScoreRead = input.nextInt();
+            String nameRead = input.next();
+            int scoreRead = input.nextInt();
 
-            demoArrayListFile data = new demoArrayListFile(NameRead,ScoreRead);
-            arr.add(data);
+            demoArrayListFile data = new demoArrayListFile(nameRead, scoreRead);
+            arr.add((data));
         }
         for (demoArrayListFile file : arr) {
-            System.out.println(file.toString());
+            System.out.println(file.toStringSecond());
         }
         System.out.println("\nRead The File and Sum Score");
 
@@ -79,12 +83,12 @@ public class Main {
                 if (first.getNameRead().equals(second.getNameRead())) {
                     first.setScoreRead(first.getScoreRead() + second.getScoreRead());
                     arr.remove(second);
-                    m--; //
+                    m--;
                 }
             }
-            for (demoArrayListFile filesecond : arr) {
-                System.out.println(filesecond.toString());
-            }
+        }
+        for (demoArrayListFile filesecond : arr) {
+                System.out.println(filesecond.toStringSecond());
         }
     }
 }
