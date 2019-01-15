@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
         ArrayList();
-        ArrayListFile();
+        ReadFile();
     }
 
     public static void ArrayList() {
@@ -54,7 +54,7 @@ public class Main {
     }
 
 
-    public static void ArrayListFile() throws FileNotFoundException {
+    public static void ReadFile() throws FileNotFoundException {
 
         System.out.println("\nRead The File");
 
