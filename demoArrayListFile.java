@@ -1,31 +1,31 @@
 package com.company;
 
 public class demoArrayListFile {
-    private String NameRead;
-    private int ScoreRead;
+    private String nameRead;
+    private int scoreRead;
 
-    public demoArrayListFile(String nameRead, int scoreRead) {
-        this.NameRead = nameRead;
-        this.ScoreRead = scoreRead;
+    public demoArrayListFile(String nameReadFile, int scoreReadFile) {
+        this.nameRead = nameReadFile;
+        this.scoreRead = scoreReadFile;
     }
 
     public String getNameRead() {
-        return NameRead;
+        return nameRead;
     }
 
-    public void setNameRead(String nameRead) {
-        NameRead = nameRead;
+    public void setNameRead(String nameReadFile) {
+        nameRead = nameReadFile;
     }
 
     public int getScoreRead() {
-        return ScoreRead;
+        return scoreRead;
     }
 
-    public void setScoreRead(int scoreRead) {
-        ScoreRead = scoreRead;
+    public void setScoreRead(int scoreReadFile) {
+        scoreRead = scoreReadFile;
     }
 
-    public String toString() {
-        return NameRead + " " + ScoreRead;
+    public String toStringSecond() {
+        return nameRead + " " + scoreRead;
     }
 }
