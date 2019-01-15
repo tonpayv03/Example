@@ -9,9 +9,6 @@ public class demoArrayList {
         Score = score;
     }
 
-    public demoArrayList() {
-    }
-
     public String getName() {
         return Name;
     }
