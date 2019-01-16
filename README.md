@@ -44,3 +44,8 @@ Assume that the data is in a file scores.txt, read the file into your data struc
 Question 2.3 (Optional)
 Assume that the data in a file scores.txt is very large (e.g. its size is larger than your computer’s memory) due to many score records of many students. Will the code you wrote for question 2.1 and 2.2 work? If not, what should be changed? Why? (No need to write code, simply explain in words.)
 
+
+[![output.jpg](https://i.postimg.cc/T2nkpn20/output.jpg)](https://postimg.cc/V5L9hrC0)
+
+
+[![Database.jpg](https://i.postimg.cc/T1jQFvNF/Database.jpg)](https://postimg.cc/gLJvLQWH)
