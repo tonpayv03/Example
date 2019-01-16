@@ -1,10 +1,10 @@
 package com.company;
 
-public class demoArrayListFile {
+public class DemoArrayListFile {
     private String nameRead;
     private int scoreRead;
 
-    public demoArrayListFile(String nameReadFile, int scoreReadFile) {
+    public DemoArrayListFile(String nameReadFile, int scoreReadFile) {
         this.nameRead = nameReadFile;
         this.scoreRead = scoreReadFile;
     }
