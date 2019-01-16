@@ -1,32 +1,32 @@
 package com.company;
 
-public class demoArrayList {
-    private String Name;
-    private int Score;
+public class DemoArrayList {
+    private String name;
+    private int score;
 
-    public demoArrayList(String name, int score) {
-        Name = name;
-        Score = score;
+    public DemoArrayList(String namemini, int scoremini) {
+        name = namemini;
+        score = scoremini;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setName(String namemini) {
+        name = namemini;
     }
 
     public int getScore() {
-        return Score;
+        return score;
     }
 
-    public void setScore(int score) {
-        Score = score;
+    public void setScore(int scoremini) {
+        score = scoremini;
     }
 
     @Override
     public String toString() {
-        return Name +" "+ Score;
+        return name +" "+ score;
     }
 }
